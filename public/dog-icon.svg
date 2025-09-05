@@ -1,0 +1,39 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dogGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D2691E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CD853F;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF8C00;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FF6347;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Glow effect -->
+  <circle cx="32" cy="32" r="30" fill="url(#glowGradient)" opacity="0.3"/>
+  
+  <!-- Dog head shape -->
+  <ellipse cx="32" cy="30" rx="18" ry="16" fill="url(#dogGradient)"/>
+  
+  <!-- Ears -->
+  <ellipse cx="22" cy="20" rx="6" ry="10" fill="url(#dogGradient)" transform="rotate(-30 22 20)"/>
+  <ellipse cx="42" cy="20" rx="6" ry="10" fill="url(#dogGradient)" transform="rotate(30 42 20)"/>
+  
+  <!-- Eyes -->
+  <circle cx="27" cy="27" r="2" fill="#000"/>
+  <circle cx="37" cy="27" r="2" fill="#000"/>
+  <circle cx="27.5" cy="26.5" r="0.5" fill="#FFF"/>
+  <circle cx="37.5" cy="26.5" r="0.5" fill="#FFF"/>
+  
+  <!-- Nose -->
+  <ellipse cx="32" cy="33" rx="2" ry="1.5" fill="#000"/>
+  
+  <!-- Mouth -->
+  <path d="M32 35 Q28 38 26 36" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M32 35 Q36 38 38 36" stroke="#000" stroke-width="1" fill="none"/>
+  
+  <!-- Muzzle highlight -->
+  <ellipse cx="32" cy="35" rx="8" ry="6" fill="url(#dogGradient)" opacity="0.8"/>
+</svg>
