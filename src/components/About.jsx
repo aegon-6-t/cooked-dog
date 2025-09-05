@@ -1,32 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Shield, Zap, Users, Target } from 'lucide-react'
 
 // About Component - About the token section
 const About = () => {
-  // Features data
-  const features = [
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Unruggable",
-      description: "Contract audited by top security experts. No more getting cooked by rugpulls."
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Lightning Fast",
-      description: "Ultra-fast transactions. Don't get left behind when the pump starts."
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Strong Pack",
-      description: "A loyal community that sticks together. We don't abandon our own."
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "Mission",
-      description: "Turn every cooked dog into a top dog. Rise from the ashes."
-    }
-  ]
 
   return (
     <section id="about" className="py-20 relative">
@@ -34,48 +10,6 @@ const About = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-500/5 to-transparent"></div>
 
       <div className="container mx-auto px-6">
-        {/* En-tête de section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Why Choose{' '}
-            <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
-              COOKED DOG
-            </span>
-            ?
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            COOKED DOG isn't just a token, it's a comeback story.
-            From cooked to cooking. From rekt to wrecking. Join the redemption arc.
-          </p>
-        </motion.div>
-
-        {/* Grille des fonctionnalités */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
-              className="card-glow text-center group"
-            >
-              <div className="text-primary-500 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-gray-400">{feature.description}</p>
-            </motion.div>
-          ))}
-        </div>
-
         {/* Section histoire */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -84,12 +18,16 @@ const About = () => {
           viewport={{ once: true }}
           className="grid lg:grid-cols-2 gap-12 items-center"
         >
-          {/* Texte */}
-          <div>
-            <h3 className="text-3xl font-bold mb-6 text-primary-500">
-              Our Story
-            </h3>
-            <div className="space-y-4 text-gray-300">
+          {/* Texte aligné à gauche */}
+          <div className="text-left">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Our{' '}
+              <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
+                Story
+              </span>
+            </h2>
+
+            <div className="space-y-6 text-lg text-gray-300">
               <p>
                 COOKED DOG was born from the ashes of every rug pull, every failed promise,
                 every "diamond hands" that turned to dust. We've all been there - cooked,
@@ -106,30 +44,164 @@ const About = () => {
               </p>
             </div>
 
+
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary mt-8"
+              className="btn-primary mt-12"
             >
               Join The Pack
             </motion.button>
           </div>
 
-          {/* Visual element - Link to live stats */}
-          <div className="flex justify-center">
-            <motion.a
-              href="https://www.geckoterminal.com/fr/base/pools/0x149cedeb78228d50687813e0eaee223f3c66f0068993ac4daf0a49db10185a1c"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              className="card-glow p-8 text-center cursor-pointer hover:border-primary-400/50 transition-all duration-300"
-            >
-              <div className="text-6xl mb-4">📊</div>
-              <h4 className="text-xl font-bold text-primary-500 mb-2">Check Live Stats</h4>
-              <p className="text-gray-400">View real-time data on GeckoTerminal</p>
-              <div className="text-sm text-primary-400 font-semibold mt-2">geckoterminal.com</div>
-            </motion.a>
-          </div>
+          {/* Image à côté */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex justify-center lg:justify-end"
+          >
+            <div className="relative">
+              <img
+                src="/images/cookeddog.webp"
+                alt="Cooked Dog Meme"
+                className="w-96 h-96 object-cover rounded-3xl shadow-2xl"
+              />
+              {/* Effet de brillance */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 via-transparent to-yellow-400/20 rounded-3xl"></div>
+              {/* Bordure dorée */}
+              <div className="absolute inset-0 border-2 border-primary-500/30 rounded-3xl"></div>
+            </div>
+          </motion.div>
+
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+// Nouvelle section Galerie de Memes
+const MemeGallery = () => {
+  const memes = [
+    { src: "/memes/a56rom.jpg", alt: "Cooked Dog Meme 1", size: "large" },
+    { src: "/memes/dooggg.png", alt: "Cooked Dog Meme 2", size: "medium" },
+    { src: "/memes/doooogge.png", alt: "Cooked Dog Meme 3", size: "small" },
+    { src: "/memes/G0FhQBBWsAA-I87.jpeg", alt: "Cooked Dog Meme 4", size: "medium" },
+    { src: "/memes/G0FLLq1WMAAj8f_.jpeg", alt: "Cooked Dog Meme 5", size: "large" },
+    { src: "/memes/Cooked-logo-solana.jpg", alt: "Cooked Dog Logo", size: "small" },
+    { src: "/memes/assets2Ftask_01k4d0fxwvehdvf4yp8ws3kcdt2F1757078561_img_0.png", alt: "Cooked Dog AI 1", size: "medium" },
+    { src: "/memes/assets2Ftask_01k4d0tj9qe5trb75jpkbekrht2F1757078840_img_1.png", alt: "Cooked Dog AI 2", size: "small" }
+  ]
+
+  const getSizeClass = (size) => {
+    switch (size) {
+      case 'large':
+        return 'md:col-span-2 md:row-span-3'  // Plus grand pour éviter les coupures
+      case 'medium':
+        return 'md:col-span-1 md:row-span-2'
+      case 'small':
+      default:
+        return 'md:col-span-1 md:row-span-1'
+    }
+  }
+
+  const getImageStyle = (src) => {
+    // Définir la position de l'objet pour éviter de couper le texte important
+    const imageConfigs = {
+      "/memes/a56rom.jpg": { height: "h-96 md:h-[28rem]", objectPosition: "object-[center_20%]" }, // Léger décalage vers le haut
+      "/memes/dooggg.png": { height: "h-80 md:h-96", objectPosition: "object-[center_15%]" }, // Texte souvent en haut
+      "/memes/doooogge.png": { height: "h-56 md:h-64", objectPosition: "object-center" },
+      "/memes/G0FhQBBWsAA-I87.jpeg": { height: "h-72 md:h-80", objectPosition: "object-[center_25%]" },
+      "/memes/G0FLLq1WMAAj8f_.jpeg": { height: "h-88 md:h-[26rem]", objectPosition: "object-[center_30%]" },
+      "/memes/Cooked-logo-solana.jpg": { height: "h-48 md:h-56", objectPosition: "object-center" },
+      "/memes/assets2Ftask_01k4d0fxwvehdvf4yp8ws3kcdt2F1757078561_img_0.png": { height: "h-64 md:h-72", objectPosition: "object-[center_15%]" },
+      "/memes/assets2Ftask_01k4d0tj9qe5trb75jpkbekrht2F1757078840_img_1.png": { height: "h-60 md:h-68", objectPosition: "object-[center_20%]" }
+    }
+
+    return imageConfigs[src] || { height: "h-56 md:h-64", objectPosition: "object-center" }
+  }
+
+  return (
+    <section className="py-20 relative">
+      {/* Effet de fond */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary-500/5 via-transparent to-primary-500/10"></div>
+
+      <div className="container mx-auto px-6">
+        {/* Titre de la section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            Best{' '}
+            <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
+              Memes
+            </span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Community-created masterpieces that capture the COOKED DOG spirit
+          </p>
+        </motion.div>
+
+        {/* Mosaïque de memes avec tailles variables */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-1 auto-rows-min"
+        >
+          {memes.map((meme, index) => {
+            const imageStyle = getImageStyle(meme.src)
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02, y: -2 }}
+                className={`relative group cursor-pointer ${getSizeClass(meme.size)} ${imageStyle.height}`}
+              >
+                <img
+                  src={meme.src}
+                  alt={meme.alt}
+                  className={`w-full h-full object-cover ${imageStyle.objectPosition} shadow-lg group-hover:shadow-2xl transition-all duration-300`}
+                  loading="lazy"
+                />
+
+                {/* Overlay au hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-500/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Bordure dorée au hover */}
+                <div className="absolute inset-0 border-2 border-primary-500/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Icône de zoom au hover */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-12 h-12 bg-primary-500/80 rounded-full flex items-center justify-center backdrop-blur-sm">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                  </div>
+                </div>
+              </motion.div>
+            )
+          })}
+        </motion.div>
+
+        {/* Call to action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <p className="text-gray-400 mb-6">
+            Got a fire meme? Share it with the pack! 🔥
+          </p>
         </motion.div>
       </div>
     </section>
@@ -137,3 +209,4 @@ const About = () => {
 }
 
 export default About
+export { MemeGallery }

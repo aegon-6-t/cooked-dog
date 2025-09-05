@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Twitter, Send, MessageCircle, Mail, ExternalLink } from 'lucide-react'
+import { Twitter, Send, MessageCircle, Mail } from 'lucide-react'
 import DogIcon from './DogIcon'
 
 // Composant Footer - Pied de page du site
@@ -12,13 +12,6 @@ const Footer = () => {
     { name: 'Community', href: '#community' },
   ]
 
-  // Useful links
-  const usefulLinks = [
-    { name: 'Whitepaper', href: '#', icon: <ExternalLink size={16} /> },
-    { name: 'Security Audit', href: '#', icon: <ExternalLink size={16} /> },
-    { name: 'Base Contract', href: '#', icon: <ExternalLink size={16} /> },
-    { name: 'GeckoTerminal', href: 'https://www.geckoterminal.com/fr/base/pools/0x149cedeb78228d50687813e0eaee223f3c66f0068993ac4daf0a49db10185a1c', icon: <ExternalLink size={16} /> },
-  ]
 
   // Social networks
   const socialLinks = [
@@ -34,7 +27,7 @@ const Footer = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-primary-500/5 to-transparent"></div>
 
       <div className="container mx-auto px-6 relative">
-        <div className="grid lg:grid-cols-4 gap-12">
+        <div className="grid lg:grid-cols-3 gap-12">
           {/* Logo et description */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -101,29 +94,6 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Liens utiles */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-lg font-semibold mb-6 text-white">Resources</h3>
-            <ul className="space-y-3">
-              {usefulLinks.map((link, index) => (
-                <li key={index}>
-                  <motion.a
-                    href={link.href}
-                    whileHover={{ x: 5 }}
-                    className="text-gray-400 hover:text-primary-500 transition-colors duration-300 flex items-center space-x-2"
-                  >
-                    <span>{link.name}</span>
-                    {link.icon}
-                  </motion.a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
         </div>
 
         {/* Séparateur */}
@@ -135,51 +105,14 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row justify-between items-center"
+          className="flex justify-center items-center"
         >
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2024 COOKED DOG Token. All rights reserved.
+            © 2025 COOKED DOG Token. All rights reserved.
           </div>
 
-          <div className="flex items-center space-x-6 text-sm text-gray-400">
-            <motion.a
-              href="#"
-              whileHover={{ color: '#ee720b' }}
-              className="hover:text-primary-500 transition-colors duration-300"
-            >
-              Terms of Service
-            </motion.a>
-            <motion.a
-              href="#"
-              whileHover={{ color: '#ee720b' }}
-              className="hover:text-primary-500 transition-colors duration-300"
-            >
-              Privacy Policy
-            </motion.a>
-            <motion.a
-              href="#"
-              whileHover={{ color: '#ee720b' }}
-              className="hover:text-primary-500 transition-colors duration-300"
-            >
-              Disclaimer
-            </motion.a>
-          </div>
         </motion.div>
 
-        {/* Avertissement */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-8 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-2xl"
-        >
-          <p className="text-yellow-400 text-sm text-center">
-            ⚠️ Warning: Cryptocurrency investments are risky.
-            Never invest more than you can afford to lose.
-            DYOR (Do Your Own Research).
-          </p>
-        </motion.div>
       </div>
     </footer>
   )

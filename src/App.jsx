@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import About from './components/About'
+import About, { MemeGallery } from './components/About'
 import Community from './components/Community'
 import Footer from './components/Footer'
 import ParticleBackground from './components/ParticleBackground'
@@ -30,6 +30,8 @@ function App() {
         {/* Section À propos */}
         <About />
 
+        {/* Section Galerie de Memes */}
+        <MemeGallery />
 
         {/* Section Communauté */}
         <Community />

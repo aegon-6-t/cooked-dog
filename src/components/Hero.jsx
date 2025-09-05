@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, TrendingUp, Zap } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import Token3D from './Token3D'
 import TestToken3D from './TestToken3D'
 
@@ -19,16 +19,6 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center"
         >
-          {/* Badge d'introduction */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="inline-flex items-center space-x-2 bg-primary-500/20 border border-primary-500/30 rounded-full px-4 py-2 mb-6"
-          >
-            <Zap size={16} className="text-primary-500" />
-            <span className="text-sm font-medium text-primary-400">Don't Get Cooked</span>
-          </motion.div>
 
           {/* Titre principal */}
           <motion.h1
@@ -56,12 +46,12 @@ const Hero = () => {
           </motion.p>
 
 
-          {/* Boutons d'action */}
+          {/* Bouton d'action */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
+            className="flex justify-center"
           >
             <motion.a
               href="https://flaunch.gg/base/coin/0x8dA2E7a132A837280965a1D496d9c05FD3882d8F"
@@ -74,15 +64,6 @@ const Hero = () => {
               <span>Buy Now</span>
               <ArrowRight size={20} />
             </motion.a>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-secondary flex items-center justify-center space-x-2"
-            >
-              <TrendingUp size={20} />
-              <span>View Chart</span>
-            </motion.button>
           </motion.div>
         </motion.div>
 

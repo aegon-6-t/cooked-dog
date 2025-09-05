@@ -32,9 +32,9 @@ const Community = () => {
 
         {/* Liens essentiels */}
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Linktree */}
+          {/* GeckoTerminal - Live Stats */}
           <motion.a
-            href="https://linktr.ee/CookedDogBase"
+            href="https://www.geckoterminal.com/fr/base/pools/0x70606c07986eff00efb8ce1e7d325cd6f537e0f21f7991a9ad6ed8d290f34fa3"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 30 }}
@@ -47,9 +47,9 @@ const Community = () => {
             <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
               <ExternalLink className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl font-semibold mb-3 text-green-400">All Social Links</h3>
-            <p className="text-gray-300 mb-4">Follow us on all platforms</p>
-            <div className="text-sm text-green-400 font-semibold">linktr.ee/CookedDogBase</div>
+            <h3 className="text-2xl font-semibold mb-3 text-green-400">Live Stats</h3>
+            <p className="text-gray-300 mb-4">View real-time data</p>
+            <div className="text-sm text-green-400 font-semibold">geckoterminal.com</div>
           </motion.a>
 
           {/* Flaunch - Buy Token */}
