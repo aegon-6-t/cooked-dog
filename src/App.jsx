@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
-import Tokenomics from './components/Tokenomics'
 import Community from './components/Community'
 import Footer from './components/Footer'
 import ParticleBackground from './components/ParticleBackground'
@@ -31,8 +30,6 @@ function App() {
         {/* Section À propos */}
         <About />
 
-        {/* Section Tokenomics (informations sur le token) */}
-        <Tokenomics />
 
         {/* Section Communauté */}
         <Community />

@@ -14,13 +14,13 @@
     background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
   }
   
-  /* Style personnalisé pour les boutons */
+  /* Style personnalisé pour les boutons - responsive */
   .btn-primary {
-    @apply bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base;
   }
   
   .btn-secondary {
-    @apply border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105;
+    @apply border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white font-semibold py-3 px-6 sm:px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base;
   }
   
   /* Effet de brillance pour les cartes */

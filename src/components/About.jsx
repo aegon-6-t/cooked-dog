@@ -115,16 +115,20 @@ const About = () => {
             </motion.button>
           </div>
 
-          {/* Visual element - Meme image or illustration */}
+          {/* Visual element - Link to live stats */}
           <div className="flex justify-center">
-            <motion.div
+            <motion.a
+              href="https://www.geckoterminal.com/fr/base/pools/0x149cedeb78228d50687813e0eaee223f3c66f0068993ac4daf0a49db10185a1c"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
-              className="card-glow p-8 text-center"
+              className="card-glow p-8 text-center cursor-pointer hover:border-primary-400/50 transition-all duration-300"
             >
-              <div className="text-6xl mb-4">🔥</div>
-              <h4 className="text-xl font-bold text-primary-500 mb-2">From Cooked to Cooking</h4>
-              <p className="text-gray-400">Check live stats on your favorite DEX</p>
-            </motion.div>
+              <div className="text-6xl mb-4">📊</div>
+              <h4 className="text-xl font-bold text-primary-500 mb-2">Check Live Stats</h4>
+              <p className="text-gray-400">View real-time data on GeckoTerminal</p>
+              <div className="text-sm text-primary-400 font-semibold mt-2">geckoterminal.com</div>
+            </motion.a>
           </div>
         </motion.div>
       </div>

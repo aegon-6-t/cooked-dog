@@ -5,23 +5,22 @@ import DogIcon from './DogIcon'
 
 // Composant Footer - Pied de page du site
 const Footer = () => {
-  // Liens rapides
+  // Quick links
   const quickLinks = [
-    { name: 'Accueil', href: '#accueil' },
-    { name: 'À Propos', href: '#a-propos' },
-    { name: 'Tokenomics', href: '#tokenomics' },
-    { name: 'Communauté', href: '#communaute' },
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Community', href: '#community' },
   ]
 
-  // Liens utiles
+  // Useful links
   const usefulLinks = [
     { name: 'Whitepaper', href: '#', icon: <ExternalLink size={16} /> },
-    { name: 'Audit Sécurité', href: '#', icon: <ExternalLink size={16} /> },
-    { name: 'Contrat BSC', href: '#', icon: <ExternalLink size={16} /> },
-    { name: 'CoinGecko', href: '#', icon: <ExternalLink size={16} /> },
+    { name: 'Security Audit', href: '#', icon: <ExternalLink size={16} /> },
+    { name: 'Base Contract', href: '#', icon: <ExternalLink size={16} /> },
+    { name: 'GeckoTerminal', href: 'https://www.geckoterminal.com/fr/base/pools/0x149cedeb78228d50687813e0eaee223f3c66f0068993ac4daf0a49db10185a1c', icon: <ExternalLink size={16} /> },
   ]
 
-  // Réseaux sociaux
+  // Social networks
   const socialLinks = [
     { name: 'Twitter', icon: <Twitter size={20} />, href: '#' },
     { name: 'Telegram', icon: <Send size={20} />, href: '#' },
@@ -50,15 +49,15 @@ const Footer = () => {
             </div>
 
             <p className="text-gray-400 mb-6 max-w-md">
-              Le token crypto révolutionnaire qui transforme votre investissement en or.
-              Rejoignez la meute et montez vers la lune !
+              The meme token born from the ashes of every rug pull.
+              Join the pack and rise from the flames! 🔥
             </p>
 
             {/* Adresse du contrat */}
             <div className="bg-dark-700 rounded-2xl p-4 mb-6">
-              <div className="text-sm text-gray-400 mb-2">Adresse du Contrat :</div>
+              <div className="text-sm text-gray-400 mb-2">Contract Address:</div>
               <div className="text-primary-500 font-mono text-sm break-all">
-                0x1234567890123456789012345678901234567890
+                0x8dA2E7a132A837280965a1D496d9c05FD3882d8F
               </div>
             </div>
 
@@ -109,7 +108,7 @@ const Footer = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-semibold mb-6 text-white">Ressources</h3>
+            <h3 className="text-lg font-semibold mb-6 text-white">Resources</h3>
             <ul className="space-y-3">
               {usefulLinks.map((link, index) => (
                 <li key={index}>
@@ -139,7 +138,7 @@ const Footer = () => {
           className="flex flex-col md:flex-row justify-between items-center"
         >
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2024 COOKED DOG Token. Tous droits réservés.
+            © 2024 COOKED DOG Token. All rights reserved.
           </div>
 
           <div className="flex items-center space-x-6 text-sm text-gray-400">
@@ -148,14 +147,14 @@ const Footer = () => {
               whileHover={{ color: '#ee720b' }}
               className="hover:text-primary-500 transition-colors duration-300"
             >
-              Conditions d'utilisation
+              Terms of Service
             </motion.a>
             <motion.a
               href="#"
               whileHover={{ color: '#ee720b' }}
               className="hover:text-primary-500 transition-colors duration-300"
             >
-              Politique de confidentialité
+              Privacy Policy
             </motion.a>
             <motion.a
               href="#"
@@ -176,8 +175,8 @@ const Footer = () => {
           className="mt-8 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-2xl"
         >
           <p className="text-yellow-400 text-sm text-center">
-            ⚠️ Avertissement : Les investissements en crypto-monnaies sont risqués.
-            Ne jamais investir plus que ce que vous pouvez vous permettre de perdre.
+            ⚠️ Warning: Cryptocurrency investments are risky.
+            Never invest more than you can afford to lose.
             DYOR (Do Your Own Research).
           </p>
         </motion.div>

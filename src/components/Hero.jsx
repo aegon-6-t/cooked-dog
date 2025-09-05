@@ -7,17 +7,17 @@ import TestToken3D from './TestToken3D'
 // Hero Component - Main landing page section
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 sm:pt-20">
       {/* Effets de fond */}
       <div className="absolute inset-0 bg-gradient-radial from-primary-500/10 via-transparent to-transparent"></div>
 
-      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center justify-items-center">
         {/* Contenu textuel */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center lg:text-left"
+          className="text-center"
         >
           {/* Badge d'introduction */}
           <motion.div
@@ -35,7 +35,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-5xl lg:text-7xl font-bold mb-6 leading-tight"
+            className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight"
           >
             <span className="bg-gradient-to-r from-white via-primary-200 to-primary-400 bg-clip-text text-transparent">
               COOKED
@@ -49,7 +49,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-xl text-gray-300 mb-8 max-w-lg"
+            className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-lg"
           >
             We've all been cooked once. Don't be the dog.
             Join the pack and rise from the ashes! 🔥
@@ -61,16 +61,19 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
           >
-            <motion.button
+            <motion.a
+              href="https://flaunch.gg/base/coin/0x8dA2E7a132A837280965a1D496d9c05FD3882d8F"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary flex items-center justify-center space-x-2"
+              className="btn-primary flex items-center justify-center space-x-2 no-underline"
             >
               <span>Buy Now</span>
               <ArrowRight size={20} />
-            </motion.button>
+            </motion.a>
 
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -83,19 +86,20 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        {/* Token 3D avec le chien "cooked" */}
+        {/* Token 3D avec le chien "cooked" - responsive et centré */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative h-96 lg:h-[500px]"
+          className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] w-full flex items-center justify-center"
         >
-          {/* Essayez TestToken3D si Token3D ne fonctionne pas */}
-          <Token3D />
-          {/* <TestToken3D /> */}
+          {/* Container pour le token 3D avec overflow visible */}
+          <div className="w-full h-full relative overflow-visible flex items-center justify-center">
+            <Token3D />
+          </div>
 
           {/* Effet de brillance dorée */}
-          <div className="absolute inset-0 bg-gradient-to-t from-yellow-500/20 via-transparent to-transparent rounded-3xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-yellow-500/20 via-transparent to-transparent rounded-3xl pointer-events-none"></div>
         </motion.div>
       </div>
 

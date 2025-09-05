@@ -61,8 +61,10 @@ const Token3D = () => {
   return (
     <div className="w-full h-full">
       <Canvas
-        camera={{ position: [0, 0, 7], fov: 55 }}
+        camera={{ position: [0, 0, 7], fov: 60 }}
         className="w-full h-full"
+        gl={{ antialias: true, alpha: true }}
+        dpr={[1, 2]}
       >
         {/* Éclairage lumineux et neutre */}
         <ambientLight intensity={0.8} color="#ffffff" />
@@ -75,11 +77,14 @@ const Token3D = () => {
         {/* Pièce réaliste */}
         <RealisticCoin />
 
-        {/* Contrôles manuels */}
+        {/* Contrôles manuels - rotation uniquement */}
         <OrbitControls
-          enableZoom={true}
+          enableZoom={false}
           enablePan={false}
           autoRotate={false}
+          enableDamping={true}
+          dampingFactor={0.05}
+          rotateSpeed={0.5}
         />
       </Canvas>
     </div>
